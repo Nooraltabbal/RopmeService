@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <title>WiFi</title>
+  <style>
+    body, html {
+      margin: 0;
+      text-align: center;
+      padding-top:  200px;;
+      height: 100%;
+      background-color: #1d245b;
+    }
+    
+    .service-button {
+      background: white;
+      color: black;
+      border: none;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 15px;
+      font-size: 18px;
+      width: 200px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .service-button:hover {
+      transform: scale(1.05);
+    }
+    
+     
+    #pop-wpray{
+       position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.8);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    #pop-wpray video{
+
+      width: 400px;
+      max-width: 90vm;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+    #pop-wpray button{
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 5px 10px;
+      align-items: center;
+
+    }
+
+    #popup-praym {
+         position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.8);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+     }
+     #popup-praym video {
+      width: 400px;
+      max-width: 90vm;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+ 
+    }
+    #popup-praym button {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 5px 10px;
+      align-items: center;
+    }
+
+  </style>
+</head>
+<body>
+     <img src="images\New_LOGO_2024.png" alt="company logo" width="100" />
+     <h1></h1>
+     <button class="service-button" onclick="document.getElementById('pop-wpray').style.display='flex'"> <i class="fas fa-female "></i> Women </button>
+<div id="pop-wpray" onclick="this.style.display='none'">
+    <video controls autoplay onclick="event.stopPropagation()">
+      <source src="videos\womenprayer.MOV" type="video/mp4"></video>
+      <button onclick="document.getElementById('pop-wpray').style.display='none'; event.stopPropagation();">close</button>
+  </div>
+
+<button class="service-button" onclick="document.getElementById('popup-praym').style.display='flex'"> <i class="fas fa-male "></i> Men </button>
+<div id="popup-praym" onclick="this.style.display='none'">
+    <video controls autoplay onclick="event.stopPropagation()">
+      <source src="videos\menprayer.MOV" type="video/mp4"></video>
+      <button onclick="document.getElementById('popup-praym').style.display='none'; event.stopPropagation();">close</button>
+  </div>
+
+</body>
+</html>

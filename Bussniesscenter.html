@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WiFi</title>
+  <style>
+    body, html {
+      margin: 0;
+      text-align: center;
+      padding-top:  200px;;
+      height: 100%;
+      background-color: #1d245b;
+    }
+    
+    .service-button {
+      background: white;
+      color: black;
+      border: none;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 15px;
+      font-size: 18px;
+      width: 200px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .service-button:hover {
+      transform: scale(1.05);
+    }
+     #popup-cen {
+       position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.8);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+     #popup-cen video {
+        width: 400px;
+      max-width: 90vm;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+     #popup-cen button {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 5px 10px;
+      align-items: center;
+       border: none;
+      cursor: pointer;
+    }
+    
+
+  
+  </style>
+</head>
+<body>
+     <img src="C:\Users\HP Temp\Documents\services\images\New_LOGO_2024.png" alt="company logo" width="100" />
+     <h1></h1>
+
+<div id="popup-cen" onclick="this.style.display='none'">
+    <video controls autoplay onclick="event.stopPropagation()">
+      <source src="videos\businessCenter.MOV" type="video/mp4"></video>
+      <button onclick="document.getElementById('popup-cen').style.display='none'; event.stopPropagation();">close</button>
+  </div>
+
+</body>
+</html>

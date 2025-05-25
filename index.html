@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <title>الخدمات</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      background: #1d245b;
+      color: white;
+      padding: 50px;
+      
+    }
+
+    .service-button {
+    
+      align-items: center;
+      gap: 8px;
+
+      background: white;
+      color: black;
+      border: none;
+      border-radius: 10px;
+      padding: 10px 15px;
+      margin: 15px;
+      font-size: 16px;
+      width: 200px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .service-button:hover {
+      transform: scale(1.05);
+    }
+     #popup-cen {
+       position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.8);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+     #popup-cen video {
+        width: 400px;
+      max-width: 90vm;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    }
+     #popup-cen button {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 5px 10px;
+      align-items: center;
+       border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+    <img src="images\New_LOGO_2024.png" alt="company logo" width="150"/>
+
+  <h1>Our Services</h1>
+
+<button class="service-button" onclick="location.href='wifi.html'"> <i class="fas fa-wifi" style="margin-right:8px ;"></i> WiFi </button>
+<button class="service-button" onclick="document.getElementById('popup-cen').style.display='flex'"><i class="fas fa-briefcase"></i> Bussniess center </button>
+<div id="popup-cen" onclick="this.style.display='none'">
+    <video controls autoplay onclick="event.stopPropagation()">
+      <source src="videos\businessCenter.MOV" type="video/mp4"></video>
+      <button onclick="document.getElementById('popup-cen').style.display='none'; event.stopPropagation();">close</button>
+  </div>
+<button class="service-button" onclick="location.href='Confirmattendance.html'"> <i class="fas fa-circle-check"></i> Confirm attendance </button>
+<button class="service-button" onclick="location.href='PrayerRoom.html'"><i class="fas fa-hands-praying"></i> Prayer Room </button>
+  <button class="service-button" onclick="location.href='emergency.html'"><i class="fas fa-triangle-exclamation"></i>Emergency</button>
+  <button class="service-button" onclick="location.href='RestRoom.html'"><i class="fas fa-restroom"></i>WashRoom</button>
+  
+
+</body>
+</html>
